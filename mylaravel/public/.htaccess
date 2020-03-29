@@ -1,0 +1,9 @@
+#网站根目录不存在.htaccess文件，请点击上方按钮创建一个！
+<IfModule mod_rewrite.c>
+Options -MultiViews
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+</IfModule>
