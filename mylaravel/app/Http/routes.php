@@ -146,3 +146,20 @@ Route::resource('article','ArticleController');
 Route::get('/user-form','UserController@form');
 
 Route::post('/form','UserController@insert');
+
+Route::get('/file','UserController@show');
+
+Route::post('/upload','UserController@upload');
+
+//cookie操作
+Route::get('/cookie','UserController@cookie');
+
+//闪存操作
+Route::get('/flash','UserController@flash');
+Route::get('/old','UserController@old');
+Route::get('/flash_1','UserController@flash_1');
+Route::get('/get_flash','UserController@get_flash');
+
+Route::post('/flash','UserController@doflash');
+
+

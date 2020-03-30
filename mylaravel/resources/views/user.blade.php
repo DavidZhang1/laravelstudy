@@ -9,7 +9,7 @@
     <form action="/form" method="post">
        <input type="text" name="username">
        <input type="text" name="password">
-        {{csrf_field()}}
+        <!-- {{csrf_field()}} -->
        <button>点击提交</button>
 
 </form>
