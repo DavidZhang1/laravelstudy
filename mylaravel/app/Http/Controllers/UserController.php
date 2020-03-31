@@ -161,4 +161,59 @@ class UserController extends Controller
             echo session('name');
         }
 
+        //
+        public function response(){
+
+            //返回字符串类型
+            // return 'iloveyou';
+            //返回并设置cookie
+            // return response('') -> withCookie('name','兄弟连',10);
+            //返回json字符串    在线解析json  网址 http://json.parser.online.fr/
+            // return response()->json(['name'=>'兄弟连','age'=>11,'position'=>'昌平区']);
+            
+            //下载文件  相对路径:脚本中的相对路径是相对当前正在请求的文件 绝对路径
+            // return response()->download('./images/404.png');
+
+            //页面跳转   网站内部路径
+            // return redirect('/form');
+            //页面跳转   外部跳转
+            // return redirect('http://www.baidu.com');
+
+            //模板解析
+            // return view('response');
+
+            //设置响应头
+            // return response('123')->header('name','lamp兄弟连');
+
+            //设置返回内容并跳转
+            return '支付成功！<script>
+            setTimeout(function(){
+                location.href="/form"
+            },3000)
+            
+             
+            </script>';
+               
+        }
+
+        //模板解析
+        public function view(){
+            //解析模板
+            // return view('xdl');
+            //划分目录
+            // return view('user.index');
+            $arr = ['name'=>'xdl','age'=>11,'position'=>'北京昌平区'];
+            return view('user.xdl',['xdl'=>$arr]);
+        }
+
+        //blade的使用
+        public function blade(){
+           //这里的路径分割要使用.
+            return view('admin.user.index',[
+                'title'=>'用户的列表页',
+                'username'=>'张衍波',
+                'page'=>'<a href="/1.html">1</a><a href="/2.html">2</a><a href="/3.html">3</a>'
+                ]);
+        }
+
 }

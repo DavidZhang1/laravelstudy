@@ -162,4 +162,11 @@ Route::get('/get_flash','UserController@get_flash');
 
 Route::post('/flash','UserController@doflash');
 
+//响应的的路由   html页面icon修改 <link rel="shortcut icon" href="myicon.ico">
+Route::get('/response','UserController@response');
 
+//响应的路由
+Route::get('/view','UserController@view');
+
+//blade的使用路由
+Route::get('/blade','UserController@blade');
