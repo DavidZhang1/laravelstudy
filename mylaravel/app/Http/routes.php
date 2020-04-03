@@ -170,3 +170,18 @@ Route::get('/view','UserController@view');
 
 //blade的使用路由
 Route::get('/blade','UserController@blade');
+
+Route::get('/page','UserController@page');
+
+Route::get('/cart','UserController@cart');
+
+Route::get('/layout','UserController@layout');
+
+//模板继承
+Route::get('/extend','UserController@extend');
+
+//流程控制
+Route::get('/liucheng','UserController@liucheng');
+
+//循环控制
+Route::get('/xunhuan','UserController@xunhuan');

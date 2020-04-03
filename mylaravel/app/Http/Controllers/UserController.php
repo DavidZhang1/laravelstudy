@@ -216,4 +216,37 @@ class UserController extends Controller
                 ]);
         }
 
+        public function page(){
+           //解析模板
+           return view('page.index',['title'=>'首页']);
+        }
+
+        public function cart(){
+            //解析模板
+            return view('page.cart',['title'=>'购物车页面']);
+        }
+
+        public function layout(){
+            return view('layout.index');
+        }
+
+        public function extend(){
+            return view('layout.extend');
+        }
+
+        public function liucheng(){
+            return view('control.liucheng',['total'=>65,'momeny'=>125,'sex'=>1]);
+        }
+
+        public function xunhuan(){
+            return view('control.xunhuan',[
+                'users'=>[
+                    ['name'=>'张衍波','age'=>'21','height'=>'181cm','weight'=>'75kg'],
+                    ['name'=>'龚烁宇','age'=>'20','height'=>'178cm','weight'=>'65kg'],
+                    ['name'=>'张洪林','age'=>'20','height'=>'179cm','weight'=>'70kg'],
+
+                ]
+            ]);
+        }
+         
 }

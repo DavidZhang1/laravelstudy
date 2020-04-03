@@ -67,3 +67,6 @@ TokenMismatchException in VerifyCsrfToken.php line 53:
     GET          /pothos/{id}/edit   edit   
     PUT/PATCH    /pothos/{id}        update
     DELETE       /pothos/{id}        destory
+18  错误信息
+ErrorException in 01c20969f3343f67fbbd7ab76a6f2131 line 6:
+    进行文件搜素
